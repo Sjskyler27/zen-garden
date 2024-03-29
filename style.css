@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Kalam:wght@300;400;700&display=swap");
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #d8eff7;
+  padding: 5%;
+}
+
+body {
+  font-family: "Didact Gothic", arial, sans-serif;
+  font-size: 85%;
+  color: #333;
+  background-color: #639fa7;
+  margin: 0;
+  padding: 1em;
+  max-width: 1600px;
+}
+
 h2,
 h3,
 h4 {
@@ -18,7 +39,7 @@ h1 {
 h2 {
   color: #fff;
   font-weight: 900; /* Heavy */
-  font-size: 6em;
+  font-size: 5em;
   letter-spacing: 1px;
   line-height: 1em;
 }
@@ -65,12 +86,37 @@ a:hover {
   color: #fff;
 }
 
+/* Snowflake */
+.intro {
+  padding: 5%;
+  position:relative;
+  background-image: url(images/snowflake.svg);
+  background-repeat: no-repeat;
+  background-position: -80px -35px;
+}
+
+/*rotate and position "CSS ZEN Gardern Heading*/
+.intro h1 {
+  width:225px;
+  margin:0;
+  position:absolute;
+  top:76px;
+  right:-85px;
+  transform: rotate(-90deg);
+}
+
+/* Position "The Beauty of Design" */
+.intro h2 {
+  margin-top:70vw;
+  text-align: right;
+}
+
 .summary {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
-  padding: 15% 0;
+  padding: 1rem 0;
 }
 .summary p:last-child {
   border-top: 1px solid #253e41;
@@ -88,26 +134,62 @@ a:hover {
   padding: 5% 5% 5% 30%;
 }
 
+
+
+
+
+/*Medium Screens*/
+@media only screen and (min-width:500px){
+ 
+  /* Snowflake */
+  .intro {
+ margin-bottom:75px;
+ height:225px;
+ background-position: 70px 0px;
+}
+
+/* Position "CSS Zen Garden" */
+.intro h1 {
+  width:225px;
+  top:76px;
+  left:-75px;
+}
+
+/* Position "The Beauty of Design" */
+.intro h2 {
+  font-size: 4em;
+  margin: 60px 10px 30px 250px;
+  text-align: right;
+}
+
+}
+
+
+
+
+
+/* Large Screens */
+@media only screen and (min-width:975px){
+
+    /* Snowflake */
 .intro {
-  padding: 5%;
+ background-position: 70px 0px;
 }
 
-* {
-  box-sizing: border-box;
+
+/* Position "The Beauty of Design" */
+.intro h2 {
+  font-size:6em;
+  margin:0;
+  margin-left:20%;
+  text-align: right;
 }
 
-html {
-  background-color: #d8eff7;
-  padding: 5%;
+.summary {
+  text-align: right;
+  margin-left: 30%;
+
 }
 
-body {
-  font-family: "Didact Gothic", arial, sans-serif;
-  font-size: 85%;
-  color: #333;
-  background-color: #639fa7;
-  margin: 0;
-  padding: 1em;
 }
-
 /*# sourceMappingURL=style.css.map */
