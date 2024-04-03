@@ -26,33 +26,36 @@
 @mixin header-gradient($start-color, $end-color) {
   background: linear-gradient(to top right, $start-color, $end-color);
 }
-h2 {
-  @include header-gradient($accent1, $primary);
-  font-family: $fonts-headline;
-  margin: 0;
-  padding: 10px;
-}
-h3,
-h4 {
-  // @include header-gradient($primary, $accent2);
-  font-family: $fonts-headline;
-  margin: 0;
-}
+
 h1 {
-  @include header-gradient($accent1, $primary);
+  // @include header-gradient($accent1, $primary);
   color: $text-light;
   display: inline-block;
   font-weight: normal;
   margin-bottom: 1em;
   padding: 0.5em 1em;
 }
+
 h2 {
+  // @include header-gradient($accent1, $primary);
+  font-family: $fonts-headline;
+  margin: 0;
+  padding: 10px;
   color: $text-light;
   font-weight: 900; /* Heavy */
-  font-size: 6em;
+  font-size: 3.5em;
   letter-spacing: 1px;
-  line-height: 1em;
+  line-height: 1.25em;
 }
+
+h3,
+h4 {
+  // @include header-gradient($primary, $accent2);
+  font-family: $fonts-headline;
+  margin: 0;
+}
+
+
 h3 {
   font-size: 2.25em;
   font-weight: 200; /* Thin */
@@ -83,3 +86,6 @@ a {
 a:hover {
   border-color: $accent1;
 }
+
+
+
