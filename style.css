@@ -106,6 +106,13 @@ a:hover {
   top: 76px;
   right: -85px;
   transform: rotate(-90deg);
+  /* Adding the shiny effect */
+  background: linear-gradient(45deg, rgb(255, 255, 255) 45%, rgb(193, 211, 237) 50%, rgb(255, 255, 255) 55%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 5s infinite linear;
 }
 @media only screen and (min-width: 500px) {
   .intro h1 {
@@ -119,6 +126,14 @@ a:hover {
 .intro h2 {
   margin-top: 75vw;
   text-align: right;
+  color: transparent;
+  /* Adding the shiny effect */
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 45%, rgb(195, 226, 226) 50%, rgb(255, 255, 255) 55%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s infinite linear;
 }
 @media only screen and (min-width: 500px) {
   .intro h2 {
@@ -135,6 +150,24 @@ a:hover {
   }
 }
 
+.select {
+  /* Adding the shiny effect with a blueish tint */
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 45%, rgb(195, 226, 226) 50%, rgb(255, 255, 255) 55%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3.5s infinite linear;
+}
+
+@keyframes shine {
+  from {
+    background-position: 200%;
+  }
+  to {
+    background-position: -200%;
+  }
+}
 .summary {
   font-weight: 300;
   letter-spacing: 2px;
@@ -159,12 +192,24 @@ a:hover {
 }
 
 .preamble {
+  /* Initial position */
+  margin-left: -190%; /* Move it off the screen to the left */
+  padding: 5% 5% 5% 30%;
   background: rgba(255, 255, 255, 0.9);
   color: #333;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
+  /* Animation */
+  animation: slideIn 2s forwards; /* 1s animation duration */
 }
 
+/* Define keyframes for the animation */
+@keyframes slideIn {
+  0% {
+    margin-left: -190%; /* Start off the screen */
+  }
+  100% {
+    margin-left: -30%; /* Move to the original position */
+  }
+}
 .main {
   position: relative;
   background-image: url(images/background-snow.svg), linear-gradient(#639fa7, #c9daed);
@@ -205,7 +250,8 @@ a:hover {
   color: #639fa7;
   transform: scale(1.2);
 }
-.sidebar a::after, .sidebar a::before {
+.sidebar a::after,
+.sidebar a::before {
   content: " \a";
   white-space: pre;
 }
